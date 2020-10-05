@@ -26,7 +26,7 @@ void print2DArr(int *arr2D[], int rows, int columns) {
         for(int j = 0; j < columns; j++){	//in a flattened shape
             printf("%d", arr2D[i][j]);
             if((i+1)*(j+1) != rows*columns) printf(" "); //here we tell the program to put \n at the end instead of empty space
-        else printf("\n");  
+        	else printf("\n");  
         }
     }   
 }; 
