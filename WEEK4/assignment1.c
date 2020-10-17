@@ -55,12 +55,11 @@ int solveMaze(char **maze, const int HT, const int WD, int y, int x){
     else if(solveMaze(maze, HT, WD, y+1, x)) return 1;
     else if(solveMaze(maze, HT, WD, y-1, x)) return 1;
 
-    //if all the ways are blocked it will put a blank space and stop there(backtrack) and try other ways until it finds the right one.
+    //if all the ways are blocked it will put a blank space and stop there,go back, and try other ways until it finds the right one.
     maze[y][x] = ' ';
     return 0;
 
 }
-
 
 void printMaze(char **maze, const int HT, const int WD){
     for (int i=0; i<HT ; i++){
