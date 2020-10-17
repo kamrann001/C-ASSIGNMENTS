@@ -15,8 +15,8 @@ int main(){
 		   		    "####        ####"
 		   		    "################";
 	const int HT = 9;
-    const int WD = 16;
-    char *maze[HT];
+	const int WD = 16;
+	char *maze[HT];
 
 	for (int i=0; i<HT ; i++)		// filling the 2D char array
 	maze[i]=&mazeStr[i*WD];
