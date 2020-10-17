@@ -62,9 +62,9 @@ int solveMaze(char **maze, const int HT, const int WD, int y, int x){
 }
 
 void printMaze(char **maze, const int HT, const int WD){
-    for (int i=0; i<HT ; i++){
-	for(int j=0; j<WD-1; j++)
-	  printf("%c",maze[i][j]);
-	printf("%c\n",maze[i][WD-1]);
+	for (int i=0; i<HT ; i++){
+		for(int j=0; j<WD-1; j++)
+			printf("%c",maze[i][j]);
+		printf("%c\n",maze[i][WD-1]);
     }
 }
