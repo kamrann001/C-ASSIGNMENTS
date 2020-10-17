@@ -5,7 +5,7 @@ void printMaze(char **maze, const int HT, const int WD); // prints the maze
 int solveMaze(char **maze, const int HT, const int WD, int y, int x); // draws a path to the exit on the maze string
 
 int main(){
-    char mazeStr[] ="  ##############"
+	char mazeStr[] ="  ##############"
 		   		    "#     #     ####"
 		   	 	    "# ####* ### ####"
 		   		    "#    ###### ####"
