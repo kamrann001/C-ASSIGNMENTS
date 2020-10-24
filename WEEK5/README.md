@@ -1,0 +1,7 @@
+## Assignment 1##
+This program has a function that reimplements the resize function without using realloc() built-in function.It also frees unused allocated memory when it is needed.
+In this case it will shrink down the memory if only the quarter of the capacity is full.
+
+## Assignment 2##
+This program will take a string from a user as a command line argument. It will return "Yes" if the given brackets are balanced,
+ it will say "No" if the bracket are not balanced. It uses a stack to store and compare the brackets.
