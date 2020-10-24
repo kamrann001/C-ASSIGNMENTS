@@ -22,11 +22,11 @@ struct Stack* createStack()
 int* newrealloc(int* ptr, size_t size)
 {
 	int* new;
-	if(sizeof(ptr) < size)
+	if(sizeof(ptr) < size)	
 	{
 		new = malloc(size);
-		memcpy(new, ptr, sizeof(ptr));
-		free(ptr);
+		memcpy(new, ptr, sizeof(ptr)); //copies the contents of pointer to the new one
+		free(ptr);					   //and frees the old unused dynamic memory
 	}
 	else new = ptr;
 	return new;
@@ -35,13 +35,13 @@ int* newrealloc(int* ptr, size_t size)
 void divide_memory(struct Stack* stack)
 {
 	stack->capacity /= 2;
-	stack->array = (int*)newrealloc(stack->array, stack->capacity);
+	stack->array = (int*)newrealloc(stack->array, stack->capacity); //here we use newrealloc function istead of built-in relloc() function to shrink the memory by half
 	printf("stack reallocated, new size: %d\n",stack->capacity);
 }
 
 void sizeCheck(struct Stack* stack)
 {
-	if((stack->capacity)*0.25 >= stack->top)
+	if((stack->capacity)*0.25 >= stack->top) //divides the memory by half if only the quarter of capcity is full
 		divide_memory(stack);	
 }
 
