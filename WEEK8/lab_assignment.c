@@ -86,7 +86,8 @@ void delete_specific(struct Node **head, char *input)
 	}
 }
 
-void free_memory(struct Node *head)
+
+void free_memory(struct Node *head) //frees the allocated memory
 {
     while(head != NULL)
     {   
@@ -94,7 +95,6 @@ void free_memory(struct Node *head)
         head = head->next;
     }   
 }
-
 
 
 
@@ -125,7 +125,7 @@ int main()
   		{
 		 printList(head);
    		 quit = 1;
-		 free_memory(head);
+		 free_memory(head); //before quitting, we free the allocated memory
 
   		}
   		else if (strcmp(input,"admit") == 0)
