@@ -56,7 +56,7 @@ void admit(struct Node **head)
 	return;
 }
 
-void delete_spesific(struct Node **head, char *input)
+void delete_specific(struct Node **head, char *input)
 {
 
 	struct Node *temp_node = *head, *prev;
@@ -136,7 +136,7 @@ int main()
 		}
 		else
 		{
-        	delete_spesific(&head, input);
+        	delete_specific(&head, input);
         	if(isCorrect)
 			{
 				append(&head, input);	
