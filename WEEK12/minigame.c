@@ -5,14 +5,17 @@
 #define BUFF_SIZE 256
 
 
+
 char *check(char *password, int len, char *input){
     int input_len = 0;
     char *checked = (char*)malloc(BUFF_SIZE * sizeof(char));
     
-    while (input[input_len] != '\0'){
+    while (input[input_len] != '\0')
+	{
         input_len++;
     }
-    if (len != input_len){
+    if (len != input_len)
+	{
         return "#";
     }
     for (int i = 0; i < len; i++){
@@ -37,17 +40,16 @@ char *check(char *password, int len, char *input){
 return checked;
 }
 
+
 bool succes(char *answer, int len)
 {
     for (int i = 0; i < len; i++)
     {
         if (answer[i] != '+')
             return  false;
-    }
+    }   
 return true;
 }
-
-
 
 int main(int argc, char **argv){
     char c;
@@ -98,7 +100,7 @@ int main(int argc, char **argv){
     while (num_try > 0){
         printf("\nyou have %d tries left: ", num_try);
         scanf("%s", input);
-        
+
         bool quit_flag = true;
         for (int i = 0; i < 5; i++){
             if (input[i] != quit[i]){
@@ -109,11 +111,9 @@ int main(int argc, char **argv){
         if (quit_flag){
             free(password);
             free(input);
-            free(answer);
             exit(5);
         }
-        
-        answer = check(password, len, input);
+		answer = check(password, len, input);        
         if (answer == "#"){
             printf("Wrong number of characters, try again");
             continue;
@@ -151,6 +151,7 @@ int main(int argc, char **argv){
             printf("\ntry again");
         }
     }
+
 
 return 0;
 }
