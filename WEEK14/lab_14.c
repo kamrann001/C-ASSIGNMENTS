@@ -9,7 +9,6 @@ struct Node {
     bool swapped;
 };
 
-
 void append(struct Node** head_ref, int new_data);
 int checkSwap(struct Node **head_ref, int data);
 int swap(struct Node** head_ref, int data);
@@ -104,11 +103,15 @@ int swap(struct Node** head_ref, int data){
     
     struct Node *second = current->next;
     struct Node *prev2 = current;	
-    if (prev != NULL) prev->next = second;
-    else *head_ref = second;
+    if (prev != NULL)
+		prev->next = second;
+    else
+		*head_ref = second;
     
-    if (prev2 != NULL) prev2->next = current;
-    else *head_ref = current;
+    if (prev2 != NULL)
+		prev2->next = current;
+    else
+		*head_ref = current;
     
     struct Node *temp = second->next;
     second->next = current->next;
