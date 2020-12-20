@@ -1,0 +1,1 @@
+This program takes different numbers as input from the user and store them in linked list. When the user type DONE, it stops getting inputs. After that, according to user's input, the program swap the place of given number with the next one and show the list again. User can exit the program with typing DONE again.
