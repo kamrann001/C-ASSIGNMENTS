@@ -56,6 +56,16 @@ int main(){
     free(head);
 }
 
+void printList(struct Node *head){
+    struct Node *temp = head->next;
+    while (temp != NULL){
+        printf("%d ", temp->data);
+        temp = temp->next;
+    }
+    printf("\n");
+}
+
+
 void append(struct Node** head_ref, int new_data){ 
 
     struct Node* new_node = (struct Node*) malloc(sizeof(struct Node));  
@@ -121,14 +131,5 @@ int swap(struct Node** head_ref, int data){
     second->swapped = 1;
     
     return 1;
-}
-
-void printList(struct Node *head){
-    struct Node *temp = head->next;
-    while (temp != NULL){
-        printf("%d ", temp->data);
-        temp = temp->next;
-    }
-    printf("\n");
 }
 
